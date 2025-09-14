@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import "./orderTracking.css";
+import "./OrderTracking.css";
 
 const stages = ["Order Received", "Preparing", "Out for Delivery", "Delivered"];
 
@@ -102,3 +102,4 @@ const OrderTracking = ({ orders, setOrders }) => {
 };
 
 export default OrderTracking;
+
