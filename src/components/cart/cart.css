@@ -1,0 +1,173 @@
+.cart-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.cart-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 15px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+  align-items: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.cart-img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-info h3 {
+  margin: 0 0 5px;
+  font-size: 1.1rem;
+}
+
+.cart-info p {
+  margin: 2px 0;
+  color: #555;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff4d4f;
+}
+/* Button Style */
+.order-btn {
+  background: linear-gradient(135deg, #ff6a00, #ff9100);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.order-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff9100, #ff6a00);
+  transform: translateY(-2px);
+}
+
+.order-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Success Message */
+.success-msg {
+  margin-top: 15px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  background: #e6ffed;
+  color: #0f5132;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #b6e6c6;
+  display: inline-block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tracking-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tracking-btn {
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.tracking-btn:hover {
+  background: #ff7875;
+}
+
+
+
+/* Mobile Input Container */
+.mobile-input {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Label */
+.mobile-input label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Input Field */
+.mobile-input input[type="tel"] {
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+.mobile-input input[type="tel"]:focus {
+  border-color: #ff4d4f;
+  box-shadow: 0 0 8px rgba(255, 77, 79, 0.3);
+}
+
+/* Placeholder Styling */
+.mobile-input input[type="tel"]::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Optional: full width on mobile */
+@media (max-width: 480px) {
+  .mobile-input {
+    max-width: 100%;
+  }
+}

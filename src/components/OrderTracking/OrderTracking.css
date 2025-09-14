@@ -1,0 +1,107 @@
+.tracking-page {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.tracking-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ff4d4f;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.tracking-container {
+  display: flex;
+  flex-direction: column; /* vertical stack for mobile */
+  gap: 30px;
+  position: relative;
+}
+
+.tracking-stage {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6a00, #ff9100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle.active {
+  transform: scale(1.2);
+  box-shadow: 0 6px 16px rgba(255,77,79,0.5);
+}
+
+.tracking-stage p {
+  margin-left: 15px;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.tracking-stage p.active {
+  color: #ff4d4f;
+  font-weight: 700;
+}
+
+.line {
+  position: absolute;
+  left: 25px; /* center of the circle */
+  top: 60px;
+  width: 4px;
+  height: 60px;
+  background: #ddd;
+  border-radius: 2px;
+  z-index: 0;
+}
+
+.line.active {
+  background: linear-gradient(180deg, #ff6a00, #ff4d4f);
+}
+
+/* Last stage line hidden */
+.tracking-stage:last-child .line {
+  display: none;
+}
+
+.cancel-btn {
+  display: block;
+  margin: 20px auto 0;
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #ff7875;
+}
+
+.cancel-msg {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
